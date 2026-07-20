@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fancy by Toby | Every Girl Deserves a Little Fancy.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <div class="navbar__brand">
+      <img class="navbar__logo" alt="Fancy by Toby Logo" src="img/fancytoby.jpeg">
+      <span class="navbar__brand-name">Fancy by Toby</span>
+    </div>
+    <div class="navbar__links">
+      <a class="underline-expand" href="#collections">Collections</a>
+      <a class="underline-expand" href="#necklaces">Necklaces</a>
+      <a class="underline-expand" href="#earrings">Earrings</a>
+      <a class="underline-expand" href="#bracelets">Bracelets</a>
+      <a class="underline-expand" href="#care">Care</a>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero__bg-wrap">
+    <div class="hero__bg" style="background-image: url('img/heropicture.png')"></div>
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__content reveal">
+    <img class="hero__logo" alt="Fancy by Toby Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLKMZe4E8X7vMGuGo5jiQxLmppMjmMbabyo67IVOkJFCQVL2-ZLLlzoeyL4bmkkGauhTJtA9QjN70TFPHTFJjgysHzfNSoBarL_8zddB8gjlDlppmLqvrptfM0ni-vVLQ7q2mpX8GfKnII6hcXCNRtIXJ35O2ppDosg7QexP2wQM6nCpO-Io5dG-VOEW4XBKXGLF1nvoOGk7Ad7QvLR40wdjFjXOPr4N9c99DYlNIHBNAgvTwHInKc" />
+    <h1 class="hero__title">Fancy by Toby</h1>
+    <p class="hero__tagline">"Every Girl Deserves a Little Fancy."</p>
+    <a class="hero__cta" href="#collections">SHOP THE COLLECTION</a>
+  </div>
+</header>
+
+<!-- Featured Products -->
+<section class="section container" id="collections">
+  <div class="section-heading reveal">
+    <h2 class="section-heading__title">The Signature Selection</h2>
+    <div class="section-heading__rule"></div>
+    <p class="section-heading__desc">Hand-curated pieces that embody our philosophy of modern elegance and timeless craftsmanship.</p>
+  </div>
+
+  <div class="products-grid">
+    <!-- Product Card 1 -->
+    <div class="product-card reveal">
+      <div class="product-card__media">
+        <img alt="Golden Bloom Earrings — gold flower dangling earrings" src="img/earring.jpeg" />
+        <div class="product-card__badge"><span>NEW</span></div>
+      </div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Golden Bloom Earrings</h3>
+        <p class="product-card__price">$420.00</p>
+        <button class="product-card__button">ORDER NOW</button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card reveal" style="transition-delay: 100ms;">
+      <div class="product-card__media">
+        <img alt="Aurora Gold Watch — gold wristwatch" src="img/goldwatch.jpeg" />
+      </div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Aurora Gold Watch</h3>
+        <p class="product-card__price">$680.00</p>
+        <button class="product-card__button">ORDER NOW</button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card reveal" style="transition-delay: 200ms;">
+      <div class="product-card__media">
+        <img alt="Emerld Cascades Earrings — green teardrop earrings" src="img/greenearring.jpeg" />
+      </div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Emerald Cascades Earrings</h3>
+        <p class="product-card__price">$450.00</p>
+        <button class="product-card__button">ORDER NOW</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section with Asymmetric Layout -->
+<section class="category-section section">
+  <div class="container">
+
+    <!-- Necklaces row -->
+    <div class="feature-row feature-row--media-first">
+      <div class="feature-row__text reveal">
+        <span class="feature-row__eyebrow">ESSENTIAL PIECES</span>
+        <h2 class="feature-row__title" id="necklaces">Necklaces that Tell a Story</h2>
+        <p class="feature-row__desc">At Fancy by Toby, we believe elegance should feel effortless. Our necklace collection is thoughtfully curated to help you express your style, celebrate your confidence, and embrace your fancy every day.</p>
+        <div class="feature-row__stats">
+          <div class="feature-row__stat">
+          <a class="feature-row__link" href="#">VIEW ALL NECKLACES</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature-row__media reveal">
+        <img alt="Layered necklace stack with a delicate medallion and gold chain" src="img/necklaces.png" />
+      </div>
+    </div>
+
+    <!-- Earrings row -->
+    <div class="feature-row">
+      <div class="feature-row__media reveal">
+        <img alt="Gold hoop earrings and ear cuffs" src="img/full earring.png" />
+      </div>
+      <div class="feature-row__text reveal">
+        <span class="feature-row__eyebrow">MODERN ADORNMENT</span>
+        <h2 class="feature-row__title" id="earrings">Earrings for Every Occasion</h2>
+        <p class="feature-row__desc">From the classic simplicity of stud earrings to the architectural elegance of hoops and climbers, our collection is designed to illuminate your face and elevate your everyday style.</p>
+        <a class="feature-row__link" href="#">VIEW ALL EARRINGS</a>
+      </div>
+    </div>
+
+    <!-- Bracelets row -->
+     <div class="feature-row">
+      <div class="feature-row__media reveal">
+        <img alt="Gold bracelet with intricate design" src="img/bracelets.jpeg" />
+      </div>
+      <div class="feature-row__text reveal">
+        <span class="feature-row__eyebrow">MODERN ADORNMENT</span>
+        <h2 class="feature-row__title" id="bracelets">Bracelets for Every Occasion</h2>
+        <p class="feature-row__desc">From delicate chains to bold statement pieces, our bracelet collection is designed to complement your style and enhance your everyday look.</p>
+        <a class="feature-row__link" href="#">VIEW ALL BRACELETS</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Jewelry Care Guide -->
+<section class="section container" id="care">
+  <div class="section-heading reveal">
+    <h2 class="section-heading__title">Caring for Your Fancy</h2>
+    <div class="section-heading__rule"></div>
+    <p class="section-heading__desc">Protect your investment with these simple maintenance rituals.</p>
+  </div>
+
+  <div class="care-grid">
+    <div class="care-card hover-lift reveal">
+      <span class="material-symbols-outlined care-card__icon">cleaning_services</span>
+      <h4 class="care-card__title">Gentle Cleaning</h4>
+      <p class="care-card__desc">Use a soft-bristled brush and lukewarm water with a drop of mild soap to restore the original luster of your gold pieces.</p>
+    </div>
+    <div class="care-card hover-lift reveal" style="transition-delay: 100ms;">
+      <span class="material-symbols-outlined care-card__icon">inventory_2</span>
+      <h4 class="care-card__title">Proper Storage</h4>
+      <p class="care-card__desc">Store each piece individually in your Fancy by Toby pouch to prevent scratches and tangling of delicate chains.</p>
+    </div>
+    <div class="care-card hover-lift reveal" style="transition-delay: 200ms;">
+      <span class="material-symbols-outlined care-card__icon">block</span>
+      <h4 class="care-card__title">Chemical Avoidance</h4>
+      <p class="care-card__desc">Apply perfumes, lotions, and hairsprays before putting on your jewelry to protect the finish from harsh chemicals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Component -->
+<footer class="footer section container">
+  <div class="footer__brand">Fancy by Toby</div>
+
+  <div class="footer__links">
+    <a href="#">Contact Us</a>
+    <a href="#">Shipping</a>
+    <a href="#">Returns</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Jewelry Care</a>
+  </div>
+
+  <div class="footer__contact">
+    <p><span class="material-symbols-outlined">call</span> +(234) 906 170 0060</p>
+    <p><span class="material-symbols-outlined">mail</span> odoti.toby@gmail.com</p>
+    <p><span class="material-symbols-outlined">location_on</span> Port Harcourt, Nigeria</p>
+  </div>
+
+  <div class="footer__social">
+    <a href="#" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="#" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+    </a>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© 2026 Fancy by Toby. Every Girl Deserves a Little Fancy.</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll entrance animations
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    var windowHeight = window.innerHeight;
+    reveals.forEach(function (el) {
+      var elementTop = el.getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+  reveal();
+
+  // Header height/shadow shift on scroll
+  var navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+</body>
+</html>

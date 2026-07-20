@@ -1,0 +1,757 @@
+/* ==========================================================================
+   Fancy by Toby — Stylesheet (Simplified / Beginner-friendly version)
+   No CSS variables, no backdrop blur, no animations, flex instead of grid.
+   ========================================================================== */
+
+/* ---------- Reset & base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #1a1c1c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ---------- Simple hover helpers ---------- */
+.hover-lift:hover {
+  background-color: #f3f3f4;
+}
+
+.underline-expand:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+  background-color: #f9f9f9;
+  color: #7d562d;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.navbar.scrolled .navbar__inner {
+  height: 64px;
+}
+
+.navbar__brand {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #7d562d;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar__brand-name {
+  display: none;
+}
+
+.navbar__links {
+  display: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.navbar__links a {
+  color: #50453b;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.navbar__links a:hover {
+  color: #7d562d;
+}
+
+.navbar__icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__icons .material-symbols-outlined {
+  cursor: pointer;
+}
+
+.navbar__icons .material-symbols-outlined:hover {
+  color: #7d562d;
+}
+
+@media (min-width: 768px) {
+  .navbar__brand-name {
+    display: block;
+  }
+
+  .navbar__links {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.hero__bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 48rem;
+}
+
+.hero__logo {
+  width: 96px;
+  height: auto;
+  margin: 0 auto 32px;
+  filter: invert(1) brightness(0);
+  opacity: 0.9;
+}
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #f9f9f9;
+  margin-bottom: 16px;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+}
+
+.hero__tagline {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: rgba(249, 249, 249, 0.9);
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.hero__cta {
+  display: inline-block;
+  background-color: #2f3131;
+  color: #f9f9f9;
+  padding: 16px 40px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  border-radius: 0.125rem;
+}
+
+.hero__cta:hover {
+  background-color: #7d562d;
+}
+
+/* ==========================================================================
+   Section heading (shared)
+   ========================================================================== */
+.section-heading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-heading__title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #1a1c1c;
+  margin: 0 0 8px;
+}
+
+.section-heading__rule {
+  width: 48px;
+  height: 1px;
+  background-color: #7d562d;
+  margin: 0 auto 24px;
+}
+
+.section-heading__desc {
+  color: #50453b;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Featured products (flex instead of grid)
+   ========================================================================== */
+.products-grid {
+  display: flex;
+  gap: 48px;
+}
+
+.product-card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    width: 31%;
+  }
+}
+
+.product-card__media {
+  position: relative;
+  height: 400px;
+  background-color: #f3f3f4;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.product-card__badge span {
+  background-color: rgba(249, 249, 249, 0.9);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 0.75rem;
+  color: #7d562d;
+}
+
+.product-card__body {
+  text-align: center;
+}
+
+.product-card__name {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #1a1c1c;
+  margin: 0 0 8px;
+}
+
+.product-card__price {
+  color: #7d562d;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.product-card__button {
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  border: 1px solid rgba(26, 28, 28, 0.2);
+  padding: 8px 24px;
+  color: #1a1c1c;
+}
+
+.product-card__button:hover {
+  background-color: #1a1c1c;
+  color: #f9f9f9;
+}
+
+/* ==========================================================================
+   Category feature rows (Necklaces / Earrings) — flex instead of grid
+   ========================================================================== */
+.category-section {
+  background-color: #f3f3f4;
+}
+
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  align-items: center;
+}
+
+.feature-row + .feature-row {
+  margin-top: 120px;
+}
+
+.feature-row__text,
+.feature-row__media {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .feature-row__text,
+  .feature-row__media {
+    width: 45%;
+  }
+
+  .feature-row--media-first .feature-row__text {
+    order: 2;
+  }
+
+  .feature-row--media-first .feature-row__media {
+    order: 1;
+  }
+}
+
+.feature-row__eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #7d562d;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.feature-row__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin: 0 0 24px;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .feature-row__title {
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: normal;
+  }
+}
+
+.feature-row__desc {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: #50453b;
+  margin-bottom: 32px;
+}
+
+.feature-row__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.feature-row__stat {
+  width: 45%;
+  padding: 16px;
+  border-left: 1px solid rgba(125, 86, 45, 0.2);
+}
+
+.feature-row__stat-value {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #1a1c1c;
+  margin-bottom: 4px;
+}
+
+.feature-row__stat-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #50453b;
+}
+
+.feature-row__media {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.feature-row--media-first .feature-row__media {
+  height: 320px;
+}
+
+.feature-row__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-row__link {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #1a1c1c;
+  text-decoration: underline;
+  text-decoration-color: rgba(125, 86, 45, 0.3);
+  text-underline-offset: 8px;
+}
+
+.feature-row__link:hover {
+  text-decoration-color: #7d562d;
+}
+
+/* ==========================================================================
+   Care guide — flex instead of grid
+   ========================================================================== */
+.care-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.care-card {
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 1px solid rgba(26, 28, 28, 0.05);
+}
+
+@media (min-width: 768px) {
+  .care-card {
+    width: 30%;
+  }
+}
+
+.care-card__icon {
+  font-size: 36px;
+  color: #7d562d;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.care-card__title {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.care-card__desc {
+  color: #50453b;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+.newsletter {
+  position: relative;
+  height: 384px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.newsletter__bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.newsletter__bg-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsletter__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(249, 249, 249, 0.9);
+}
+
+.newsletter__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 42rem;
+}
+
+.newsletter__title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #1a1c1c;
+  margin: 0 0 16px;
+}
+
+.newsletter__desc {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: #50453b;
+  margin-bottom: 32px;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .newsletter__form {
+    flex-direction: row;
+  }
+}
+
+.newsletter__input {
+  flex: 1;
+  background-color: #f9f9f9;
+  border: none;
+  border-bottom: 1px solid rgba(26, 28, 28, 0.2);
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 12px 0;
+  outline: none;
+}
+
+.newsletter__input:focus {
+  border-bottom-color: #7d562d;
+}
+
+.newsletter__submit {
+  background-color: #7d562d;
+  color: #f9f9f9;
+  padding: 12px 32px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.125rem;
+}
+
+.newsletter__submit:hover {
+  background-color: #5b3912;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  background-color: #f3f3f4;
+}
+
+.footer__brand {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #7d562d;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .footer__links {
+    gap: 48px;
+  }
+}
+
+.footer__links a {
+  color: #50453b;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.footer__links a:hover {
+  color: #7d562d;
+  opacity: 1;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: rgba(80, 69, 59, 0.7);
+}
+
+.footer__contact p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.footer__contact .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.footer__social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 28, 28, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #50453b;
+}
+
+.footer__social a:hover {
+  border-color: #7d562d;
+  color: #7d562d;
+}
+
+.footer__social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(26, 28, 28, 0.05);
+  width: 100%;
+  padding-top: 32px;
+  margin-top: 32px;
+}
+
+.footer__bottom p {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #50453b;
+  margin: 0;
+}
