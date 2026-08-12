@@ -245,15 +245,14 @@ button {
   background-color: #2f3131;
   color: #f9f9f9;
   padding: 16px 40px;
+  margin: 40px 0 10px 0;
   font-size: 12px;
   letter-spacing: 0.2em;
   font-weight: 500;
   border-radius: 0.125rem;
 }
 
-.hero__cta:hover {
-  background-color: #7d562d;
-}
+
 
 /* ==========================================================================
    Section heading (shared)
@@ -288,9 +287,16 @@ button {
 /* ==========================================================================
    Featured products (flex instead of grid)
    ========================================================================== */
-.products-grid {
+.products-grid { 
   display: flex;
   gap: 48px;
+}
+
+@media (max-width: 500px) {
+  .products-grid { 
+  flex-direction: column;
+  gap: 24px;
+}
 }
 
 .product-card {
@@ -301,6 +307,49 @@ button {
   .product-card {
     width: 31%;
   }
+}
+
+.earrings-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+  
+}
+
+
+.earrings-grid img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+.anklets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 20px 0 20px;
+  
+}
+
+.anklets-pictures{
+padding-top: 10px;
+object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .earrings-grid { 
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .earrings-grid img {
+  height: 150px;
+  width: 100%;
+}
+.anklets-grid {
+  grid-template-columns: repeat(2, 1fr);  
+}
 }
 
 .product-card__media {
@@ -396,13 +445,13 @@ button {
     width: 45%;
   }
 
-  .feature-row--media-first .feature-row__text {
-    order: 2;
+  /* .feature-row--media-first .feature-row__text {
+    order: 1;
   }
 
   .feature-row--media-first .feature-row__media {
     order: 1;
-  }
+  } */
 }
 
 .feature-row__eyebrow {
