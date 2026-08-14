@@ -115,11 +115,13 @@ button {
   display: none;
 }
 
+
 .navbar__links {
   display: none;
   gap: 32px;
   align-items: center;
 }
+
 
 .navbar__links a {
   color: #50453b;
@@ -155,7 +157,10 @@ button {
   .navbar__links {
     display: flex;
   }
+
 }
+
+
 
 /* ==========================================================================
    Hero
