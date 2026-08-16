@@ -306,6 +306,25 @@ button {
 
 .product-card {
   width: 100%;
+  position: relative;
+}
+
+.product-cards{
+position: relative;
+}
+
+.sold-out-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f9f9f9;
+    color: #504535;
+    padding: 12px 20px;
+    border-radius: 18px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    z-index: 5;
 }
 
 @media (min-width: 768px) {
