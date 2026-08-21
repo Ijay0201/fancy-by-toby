@@ -348,6 +348,19 @@ position: relative;
   object-fit: cover;
 }
 
+.bracelets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.bracelets-grid img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
 
 
 .anklets-grid {
@@ -368,6 +381,13 @@ object-fit: cover;
   grid-template-columns: repeat(2, 1fr);
   }
   .earrings-grid img {
+  height: 150px;
+  width: 100%;
+}
+.bracelets-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.bracelets-grid img {
   height: 150px;
   width: 100%;
 }
